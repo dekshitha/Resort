@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>Activities</title>
+<!--font awesome icons-->
+
+<link rel="stylesheet" href="fontawesome-free-5.15.1-web/fontawesome-free-5.15.1-web/css/all.css">
+    
+    <!------owl-carousel-->
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
+
+
+    <!--Custom Style-->
+    <link rel="stylesheet" href="explore.css">
+    
+</head>
+<body>
+
+    <div id="home">
+        <div class="navbar">
+            <img src="pictures/leftarrow.png" id="prev" class="logo">
+            <img src="pictures/rightarrow.png" id="next" class="right">
+        </div>    
+        
+        <div class="container">
+            
+            <div class="info">
+                <p>
+                    <p>
+                    Our Luxury Cottages offer a spectacular view of the surrounding greenery, 
+                    while the interiors reflecting the serenity of nature in subtle pastel tones.<br></p>
+                    <h2>Luxury Cottages</h2>
+                    <p>Our Luxury Cottages offer a spectacular view of the surrounding greenery, 
+                    while the interiors reflecting the serenity of nature in subtle pastel tones.<br></p>
+                    <h2>Superior Luxury Cottage</h2>
+                    Located at strategic vantage points, provide a majestic view of the surrounding forests
+                    and hills in the distance. The decor draws inspiration from nature and attributes an elegant look.<br>
+                    <h2>The Suite Cottage</h2>
+                    Expresses the joy of living large. The wall-to-wall wood panelling and the elegant colour schemes 
+                    recreate the soft hues of nature.<br>
+                    <h2>Tree house</h2>
+                    Wake up to the breathtaking view and the calming silence of the hills,
+                    disturbed only by the chirping birds and the rustle of leaves.<br>
+                </p>
+                <br>
+                <a href='explore2.html' style="color: black;">Have a look at the activities</a>
+            </div>
+        </div>
+        <div class="slider">
+            <!--<img src="pictures/leftarrow.png" id="prev">-->
+            <div class="preview">
+            <img src="pictures/super_luxury.jpg" class="active thumbnail">
+                <img src="pictures/room1.jpg" class="thumbnail">
+                <img src="pictures/caro1.jpg" class="thumbnail">
+                <img src="pictures/treehouse.jpg" class="thumbnail">
+                <img src="pictures/caro2.webp" class="thumbnail">
+                
+                
+
+
+            </div>
+            <!--<img src="pictures/rightarrow.png" id="next">-->
+        </div>
+        
+</div>
+<script>
+ var prev = document.getElementById("prev");
+ var next = document.getElementById("next");
+ var thumbnail = document.getElementsByClassName("thumbnail");
+ var home = document.getElementById("home")
+ var backgroundImg = new Array(
+    
+    "pictures/super_luxury.jpg",
+    "pictures/room1.jpg",
+    "pictures/caro1.jpg",
+    "pictures/treehouse.jpg",
+    "pictures/caro2.webp"
+
+    
+
+);
+let i = 0;
+ next.onclick=function(){
+    if(i < 4){
+    home.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
+    thumbnail[i+1].classList.add("active");
+    thumbnail[i].classList.remove("active");
+
+    i++;
+    }
+}
+prev.onclick=function(){
+    if(i > 0){
+    home.style.backgroundImage = 'url("'+backgroundImg[i-1]+'")';
+    thumbnail[i-1].classList.add("active");
+    thumbnail[i].classList.remove("active");
+    i--;
+    }
+}
+
+</script>
+</body>
+</html>
+

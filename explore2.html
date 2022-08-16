@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>Activities</title>
+<!--font awesome icons-->
+
+<link rel="stylesheet" href="fontawesome-free-5.15.1-web/fontawesome-free-5.15.1-web/css/all.css">
+    
+    <!------owl-carousel-->
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
+
+
+    <!--Custom Style-->
+    <link rel="stylesheet" href="trial.css">
+    
+</head>
+<body>
+
+    <div id="home">
+        <div class="navbar">
+            <img src="pictures/leftarrow.png" id="prev" class="logo">
+            <img src="pictures/rightarrow.png" id="next" class="right">
+        </div>    
+        
+        <div class="container">
+            
+            <div class="info">
+                <p>
+                    Your stay at here will be filled with uniquely curated experiences and nature-based activities.
+                    <h2>Forest Therapy</h2>
+                    Immerse yourselves in a natural environment, bathing in positive energies of the forest.
+                    <h2>Trekking</h2>
+                    Treks feature stunning trails, viewpoints, and waterfalls, enhanced by the cool breeze and the chirping of exotic birds.
+                    <h2>Outdoor Dining and camping</h2>
+                    Enjoy a private gourmet meal under an open sky at a variety of stunning spots at the resort. Now this is luxury!.
+                    <h2>Swimming Pool</h2>
+                    There are two beautiful swimming pools – one indoor heated pool, and one outdoor pool.
+                    <h2>Blossom to Brew</h2>
+                    Pulp fresh berries, grade, roast, and grind them with your own hands, and prepare the perfect aromatic cup of coffee!
+                    <h2>Plantation Tour</h2>
+                    This tour offers guests an up-close look at coffee, cardamom, & pepper plantations-their unique sights, smells, and activities.
+                
+                </p>
+                <br>
+                <button  onclick="document.location='signup.php'">Book Now!</button>
+            </div>
+        </div>
+        <div class="slider">
+            <!--<img src="pictures/leftarrow.png" id="prev">-->
+            <div class="preview">
+            <img src="pictures/Trekking.jpg" class="active thumbnail">
+                <img src="pictures/Forest-Therapy.png" class="thumbnail">
+                <img src="pictures/falls.jpg" class="thumbnail">
+                <img src="pictures/swimingpool.jpg" class="thumbnail">
+                <img src="pictures/blossom.jpg" class="thumbnail">
+                
+
+
+            </div>
+            <!--<img src="pictures/rightarrow.png" id="next">-->
+        </div>
+        
+</div>
+<script>
+ var prev = document.getElementById("prev");
+ var next = document.getElementById("next");
+ var thumbnail = document.getElementsByClassName("thumbnail");
+ var home = document.getElementById("home")
+ var backgroundImg = new Array(
+    
+    "pictures/Trekking.jpg",
+    "pictures/Forest-Therapy.png",
+    "pictures/falls.jpg",
+    "pictures/swimingpool.jpg",
+    "pictures/blossom.jpg"
+
+);
+let i = 0;
+ next.onclick=function(){
+    if(i < 4){
+    home.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
+    thumbnail[i+1].classList.add("active");
+    thumbnail[i].classList.remove("active");
+
+    i++;
+    }
+}
+prev.onclick=function(){
+    if(i > 0){
+    home.style.backgroundImage = 'url("'+backgroundImg[i-1]+'")';
+    thumbnail[i-1].classList.add("active");
+    thumbnail[i].classList.remove("active");
+    i--;
+    }
+}
+
+</script>
+</body>
+</html>
+

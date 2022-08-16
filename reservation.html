@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <!--font awesome icons-->
+
+    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/fontawesome-free-5.15.1-web/css/all.css">
+    <!--Custom Style-->
+    <link rel="stylesheet" href="res_style.css">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!------owl-carousel-->
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="reservation.php" class="form-group" method="post">
+            <div id="form">
+                <h1 class="text-white" text="center">Reservation</h1>
+                <div id="first-group">
+                    <div id="content">
+                       arriving:<i class="fa fa-calendar" aria-hidden="true"></i>
+                       <input type="date" id="input-group" name="arriving"  style="background-color: black;" placeholder="Arriving" required>
+                    </div>
+                    <div id="content">
+                        departing:<i class="fa fa-calendar" aria-hidden="true"></i>
+                        <input type="date" id="input-group" name="departing"  style="background-color: black;" placeholder="Departing" required>
+                     </div>
+                     <div id="content">
+                        <i class="fa fa-bed" aria-hidden="true"></i>
+                        <select  id="input-group" name="type" style="background-color: black;" required>
+                            <option value="">Accomodation type</option>
+                            <option value="Superior Luxury Cottage">Superior Luxury Cottage (18000 INR)</option>
+                            <option value="Luxury Cottage">Luxury Cottage (15000 INR)</option>
+                            <option value="Suite Cottage">Suite Cottage (10000 INR)</option>
+                            <option value="Tree House">Tree House (7000 INR)</option>
+                        </select>   
+                     </div>
+                     
+                     <div id="content">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <select id="input-group" name="guests" style="background-color: black;" required>
+                            <option value="">No. of guests</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+
+                        </select>  
+                     </div>    
+                </div>
+                <button type="submit" name="submit" value="submit" id=submit-btn>Book Now!</button>
+            </div>
+        </form>
+    </div>
+</body>   
+
+</html>
