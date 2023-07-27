@@ -9,4 +9,5 @@ Database Used- phpmyadmin
 Back-end- PHP
 Front-end- HTML, CSS, Javascript
 
-![ss1](https://github.com/dekshitha/Resort-Booking-System/assets/53999141/446852c1-aa40-4153-9568-1736d62a5d2f)
+
+<img width="765" alt="ss1" src="https://github.com/dekshitha/Resort-Booking-System/assets/53999141/845323dd-a118-48a7-806f-884dfa459381">
